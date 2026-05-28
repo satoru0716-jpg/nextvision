@@ -448,14 +448,14 @@ footer{background:var(--text);padding:36px 48px;display:flex;justify-content:spa
         <div><div class="contact-meta-label">Company</div><div class="contact-meta-val">株式会社 Next Vision</div></div>
       </div>
     </div>
-    <div class="contact-form">
-      <input class="cf-input" type="text" placeholder="会社名 / お名前 *">
-      <input class="cf-input" type="email" placeholder="メールアドレス *">
-      <input class="cf-input" type="tel" placeholder="電話番号">
-      <select class="cf-select"><option value="" disabled selected>ご相談内容を選択してください</option><option>採用動画</option><option>企業VP・会社紹介</option><option>SNS・YouTube動画</option><option>CM・広告映像</option><option>その他</option></select>
-      <textarea class="cf-textarea" placeholder="ご相談内容・ご要望など（予算・納期など）"></textarea>
-      <button class="cf-btn">無料相談を申し込む →</button>
-    </div>
+    <form class="contact-form" action="https://formspree.io/f/xzdovwpa" method="POST">
+      <input class="cf-input" type="text" name="会社名・お名前" placeholder="会社名 / お名前 *" required>
+      <input class="cf-input" type="email" name="メールアドレス" placeholder="メールアドレス *" required>
+      <input class="cf-input" type="tel" name="電話番号" placeholder="電話番号">
+      <select class="cf-select" name="ご相談内容"><option value="" disabled selected>ご相談内容を選択してください</option><option>採用動画</option><option>企業VP・会社紹介</option><option>SNS・YouTube動画</option><option>CM・広告映像</option><option>その他</option></select>
+      <textarea class="cf-textarea" name="ご要望・詳細" placeholder="ご相談内容・ご要望など（予算・納期など）"></textarea>
+      <button class="cf-btn" type="submit">無料相談を申し込む →</button>
+    </form>
   </div>
 </section>
 
