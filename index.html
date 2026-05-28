@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Vision | 映像制作・採用動画・企業VP｜関西</title>
+<meta name="description" content="関西（大阪・兵庫・京都）拠点の映像制作会社。採用動画・企業VP・SNS動画・CM制作。中小企業・スタートアップの映像課題を解決します。">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#ffffff;
+  --bg2:#faf7f3;
+  --bg3:#f5ede0;
+  --text:#1a1410;
+  --text2:#5a4f45;
+  --orange:#e8650a;
+  --yellow:#f0a500;
+  --border:#e8e0d5;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-serif;overflow-x:hidden;}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;background:rgba(255,255,255,0.95);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:5px;color:var(--text);}
+.nav-logo span{color:var(--orange);}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{color:var(--text);text-decoration:none;font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:0.45;transition:opacity 0.2s;}
+.nav-links a:hover{opacity:1;}
+.nav-cta{background:var(--orange);color:#fff;border:none;padding:10px 24px;font-size:12px;letter-spacing:2px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:580px;overflow:hidden;}
+.hero-left{padding:80px 48px;display:flex;flex-direction:column;justify-content:center;background:var(--bg);}
+.hero-right{background:var(--bg3);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-right-wordmark{font-family:'Bebas Neue',sans-serif;font-size:220px;color:rgba(232,101,10,0.1);line-height:1;letter-spacing:-8px;user-select:none;}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;}
+.hero-tag-dot{width:7px;height:7px;border-radius:50%;background:var(--orange);}
+.hero-tag-text{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--text2);}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,7vw,110px);line-height:0.9;letter-spacing:3px;margin-bottom:28px;}
+.hero-title .accent{color:var(--orange);}
+.hero-title .stroke{-webkit-text-stroke:2px var(--text);color:transparent;}
+.hero-sub{font-size:14px;line-height:2.1;color:var(--text2);margin-bottom:36px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-main{background:var(--orange);color:#fff;border:none;padding:14px 32px;font-size:12px;letter-spacing:3px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:background 0.2s;}
+.btn-main:hover{background:#cc5500;}
+.btn-sub{background:transparent;color:var(--text);border:1.5px solid var(--border);padding:14px 32px;font-size:12px;letter-spacing:3px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:border-color 0.2s;}
+.btn-sub:hover{border-color:var(--orange);}
+
+/* MARQUEE */
+.marquee{background:var(--orange);padding:12px 0;overflow:hidden;white-space:nowrap;}
+.marquee-track{display:inline-block;animation:mq 22s linear infinite;}
+.marquee-track span{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:4px;margin:0 32px;color:#fff;}
+.marquee-track .sep{color:var(--yellow);}
+@keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* SECTION BASE */
+.section{padding:96px 48px;}
+.eyebrow{font-size:10px;letter-spacing:5px;color:var(--orange);text-transform:uppercase;margin-bottom:12px;}
+.sec-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);letter-spacing:3px;margin-bottom:56px;color:var(--text);}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);}
+.svc{background:var(--bg);padding:40px 32px;position:relative;overflow:hidden;transition:background 0.25s;}
+.svc:hover{background:var(--bg2);}
+.svc::after{content:attr(data-n);position:absolute;bottom:-20px;right:16px;font-family:'Bebas Neue',sans-serif;font-size:90px;color:rgba(232,101,10,0.06);pointer-events:none;line-height:1;}
+.svc-n{font-family:'Bebas Neue',sans-serif;font-size:12px;color:var(--orange);letter-spacing:4px;margin-bottom:16px;}
+.svc-en{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;margin-bottom:6px;color:var(--text);}
+.svc-ja{font-size:14px;font-weight:700;color:var(--orange);margin-bottom:12px;}
+.svc-desc{font-size:12px;color:var(--text2);line-height:2;}
+.svc-price{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--orange);letter-spacing:2px;margin-top:16px;}
+
+/* WHY */
+.why-section{padding:96px 48px;background:var(--text);}
+.why-section .eyebrow{color:var(--yellow);}
+.why-section .sec-h{color:#fff;}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);}
+.why-card{background:var(--text);padding:40px 28px;border-top:3px solid transparent;transition:border-color 0.25s;}
+.why-card:hover{border-color:var(--orange);}
+.why-icon{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--orange);line-height:1;margin-bottom:18px;}
+.why-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:1px;}
+.why-desc{font-size:12px;color:rgba(255,255,255,0.5);line-height:2;}
+.why-vs{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+.why-vs-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;}
+.why-vs-bad{color:rgba(255,255,255,0.3);text-decoration:line-through;}
+.why-vs-good{color:var(--yellow);}
+.why-vs-arrow{color:var(--orange);font-size:13px;flex-shrink:0;margin-top:1px;}
+
+/* SIMULATOR */
+.sim-section{padding:96px 48px;background:var(--bg2);}
+.sim-inner{max-width:680px;}
+.disclaimer-top{background:#fff;border-left:3px solid var(--yellow);padding:12px 16px;margin-bottom:28px;font-size:12px;color:var(--text2);line-height:1.9;}
+.disclaimer-top strong{color:var(--orange);font-size:11px;letter-spacing:2px;display:block;margin-bottom:4px;text-transform:uppercase;}
+.step{background:#fff;border:1px solid var(--border);padding:24px;margin-bottom:16px;}
+.step.locked{opacity:0.4;pointer-events:none;}
+.step-label{font-size:10px;letter-spacing:4px;color:var(--orange);text-transform:uppercase;margin-bottom:6px;}
+.step-q{font-size:14px;font-weight:700;margin-bottom:16px;}
+.opts{display:flex;flex-wrap:wrap;gap:8px;}
+.opt{background:var(--bg2);border:1.5px solid var(--border);padding:10px 16px;font-size:13px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;color:var(--text2);transition:all 0.15s;}
+.opt:hover{border-color:var(--orange);color:var(--orange);}
+.opt.on{background:var(--orange);border-color:var(--orange);color:#fff;}
+.opt.consult{border-style:dashed;}
+.opt.consult.on{background:var(--text);border-color:var(--text);border-style:solid;color:#fff;}
+.opt.consult:hover{border-color:var(--text);color:var(--text);}
+.result-box{background:var(--text);padding:32px;display:none;}
+.result-box.show{display:block;}
+.res-label{font-size:10px;letter-spacing:4px;color:rgba(255,255,255,0.4);text-transform:uppercase;margin-bottom:10px;}
+.res-price{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--yellow);letter-spacing:2px;line-height:1.1;}
+.res-note{font-size:11px;color:rgba(255,255,255,0.45);margin-top:8px;}
+.breakdown{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);}
+.brow{display:flex;justify-content:space-between;padding:6px 0;font-size:12px;}
+.brow-l{color:rgba(255,255,255,0.5);}
+.brow-r{color:rgba(255,255,255,0.85);font-weight:700;}
+.disclaimer-bottom{margin-top:16px;padding:12px 16px;background:rgba(255,255,255,0.05);border-left:2px solid var(--yellow);font-size:11px;color:rgba(255,255,255,0.4);line-height:1.9;}
+.cta-sim{margin-top:20px;}
+.cta-sim-btn{background:var(--orange);color:#fff;border:none;padding:14px;font-size:12px;letter-spacing:3px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;width:100%;transition:background 0.2s;}
+.cta-sim-btn:hover{background:#cc5500;}
+.cta-sim-note{font-size:11px;color:rgba(255,255,255,0.35);text-align:center;margin-top:8px;letter-spacing:1px;}
+
+/* VOICES */
+.voices-section{padding:96px 48px;}
+.voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.voice-card{background:var(--bg);border:1px solid var(--border);padding:32px 24px;}
+.voice-quote{font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--orange);opacity:0.2;line-height:0.7;margin-bottom:10px;}
+.voice-company{font-size:10px;letter-spacing:4px;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.voice-type{display:inline-block;background:rgba(232,101,10,0.08);color:var(--orange);font-size:10px;letter-spacing:2px;padding:4px 10px;margin-bottom:16px;border:1px solid rgba(232,101,10,0.2);}
+.voice-text{font-size:13px;line-height:2;color:var(--text2);}
+.voice-divider{width:28px;height:2px;background:var(--orange);margin:16px 0 12px;}
+.voice-info{font-size:12px;color:var(--text2);opacity:0.7;line-height:1.8;}
+
+/* FLOW */
+.flow-section{padding:96px 48px;background:var(--bg2);}
+.flow-list{margin-top:48px;}
+.flow-item{display:grid;grid-template-columns:72px 1fr;border-top:1px solid var(--border);padding:22px 0;align-items:start;}
+.flow-item:last-child{border-bottom:1px solid var(--border);}
+.flow-num{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--orange);opacity:0.3;line-height:1.1;}
+.flow-title{font-size:15px;font-weight:700;margin-bottom:5px;color:var(--text);}
+.flow-desc{font-size:12px;color:var(--text2);line-height:2;}
+
+/* CONTACT */
+.contact-section{padding:96px 48px;background:var(--bg3);}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.contact-big{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6vw,88px);line-height:0.9;letter-spacing:3px;margin-bottom:24px;color:var(--text);}
+.contact-big .oline{-webkit-text-stroke:2px var(--orange);color:transparent;}
+.contact-lead{font-size:14px;color:var(--text2);line-height:2.1;margin-bottom:32px;}
+.contact-meta{display:flex;flex-direction:column;gap:16px;}
+.contact-meta-label{font-size:10px;letter-spacing:4px;color:var(--orange);text-transform:uppercase;margin-bottom:3px;}
+.contact-meta-val{font-size:14px;font-weight:700;color:var(--text);}
+.contact-form{display:flex;flex-direction:column;gap:12px;}
+.cf-input,.cf-textarea,.cf-select{background:#fff;border:1px solid var(--border);color:var(--text);padding:13px 16px;font-size:13px;font-family:'Noto Sans JP',sans-serif;outline:none;transition:border-color 0.2s;width:100%;}
+.cf-input:focus,.cf-textarea:focus,.cf-select:focus{border-color:var(--orange);}
+.cf-input::placeholder,.cf-textarea::placeholder{color:#bbb;}
+.cf-select{color:#aaa;appearance:none;}
+.cf-select option{color:var(--text);}
+.cf-textarea{height:110px;resize:none;}
+.cf-btn{background:var(--orange);color:#fff;border:none;padding:15px;font-size:12px;letter-spacing:3px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;width:100%;transition:background 0.2s;}
+.cf-btn:hover{background:#cc5500;}
+
+footer{background:var(--text);padding:36px 48px;display:flex;justify-content:space-between;align-items:center;}
+.f-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;color:#fff;}
+.f-logo span{color:var(--orange);}
+.f-copy{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:1px;}
+.f-links{display:flex;gap:24px;}
+.f-links a{color:#fff;text-decoration:none;font-size:11px;letter-spacing:1px;opacity:0.35;transition:opacity 0.2s;}
+.f-links a:hover{opacity:1;}
+
+@media(max-width:768px){
+  nav{padding:16px 20px;}
+  .nav-links{display:none;}
+  .hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .hero-left{padding:48px 20px;}
+  .section,.why-section,.sim-section,.voices-section,.flow-section,.contact-section{padding:72px 20px;}
+  .services-grid,.why-grid,.voices-grid{grid-template-columns:1fr;}
+  .contact-inner{grid-template-columns:1fr;gap:40px;}
+  footer{flex-direction:column;gap:16px;text-align:center;padding:28px 20px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">NEXT<span>.</span>VISION</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#simulator">料金</a>
+    <a href="#voices">Voices</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">無料相談</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-left">
+    <div class="hero-tag"><span class="hero-tag-dot"></span><span class="hero-tag-text">Kansai Based Video Production</span></div>
+    <h1 class="hero-title">
+      <div>映像で</div>
+      <div class="accent">採用を、</div>
+      <div class="stroke">変える。</div>
+    </h1>
+    <p class="hero-sub">採用動画・企業VP・SNS動画まで。<br>関西の映像制作はNext Visionへ。<br>まずは無料でご相談ください。</p>
+    <div class="hero-btns">
+      <button class="btn-main" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">無料相談する</button>
+      <button class="btn-sub" onclick="document.getElementById('voices').scrollIntoView({behavior:'smooth'})">お客様の声を見る</button>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-wordmark">NV</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>採用動画</span><span class="sep"> ✦ </span>
+    <span>CORPORATE VP</span><span class="sep"> ✦ </span>
+    <span>SNS CONTENT</span><span class="sep"> ✦ </span>
+    <span>企業紹介</span><span class="sep"> ✦ </span>
+    <span>CM制作</span><span class="sep"> ✦ </span>
+    <span>YOUTUBE</span><span class="sep"> ✦ </span>
+    <span>EVENT FILM</span><span class="sep"> ✦ </span>
+    <span>採用動画</span><span class="sep"> ✦ </span>
+    <span>CORPORATE VP</span><span class="sep"> ✦ </span>
+    <span>SNS CONTENT</span><span class="sep"> ✦ </span>
+    <span>企業紹介</span><span class="sep"> ✦ </span>
+    <span>CM制作</span><span class="sep"> ✦ </span>
+    <span>YOUTUBE</span><span class="sep"> ✦ </span>
+    <span>EVENT FILM</span><span class="sep"> ✦ </span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="eyebrow">Our Services</div>
+  <h2 class="sec-h">映像制作<br>サービス</h2>
+  <div class="services-grid">
+    <div class="svc" data-n="01">
+      <div class="svc-n">01</div>
+      <div class="svc-en">RECRUITMENT VIDEO</div>
+      <div class="svc-ja">採用動画</div>
+      <div class="svc-desc">求職者の心を動かす採用動画。会社の文化・職場の雰囲気を映像で伝え、採用ミスマッチを防ぎます。求人媒体との組み合わせで応募数アップを実現。</div>
+      <div class="svc-price">¥300,000〜</div>
+    </div>
+    <div class="svc" data-n="02">
+      <div class="svc-n">02</div>
+      <div class="svc-en">CORPORATE VP</div>
+      <div class="svc-ja">企業VP・会社紹介</div>
+      <div class="svc-desc">営業・IR・展示会で使える本格的な企業紹介動画。ブランドの核心を映像に落とし込み、信頼と実績を伝えます。</div>
+      <div class="svc-price">¥500,000〜</div>
+    </div>
+    <div class="svc" data-n="03">
+      <div class="svc-n">03</div>
+      <div class="svc-en">SNS / YOUTUBE</div>
+      <div class="svc-ja">SNS・YouTube動画</div>
+      <div class="svc-desc">拡散される映像をつくる。各プラットフォームの特性を熟知したクリエイターが、継続的なコンテンツ制作を支援します。</div>
+      <div class="svc-price">¥100,000〜</div>
+    </div>
+    <div class="svc" data-n="04">
+      <div class="svc-n">04</div>
+      <div class="svc-en">CM / AD FILM</div>
+      <div class="svc-ja">CM・広告映像</div>
+      <div class="svc-desc">15秒で刺さる映像表現。テレビCM・WEB広告・OOH広告まで、インパクトある広告映像を関西から全国へ。</div>
+      <div class="svc-price">¥800,000〜</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-section" id="why">
+  <div class="eyebrow">Why Next Vision</div>
+  <h2 class="sec-h">他社との違い</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">01</div>
+      <div class="why-title">経営視点で映像をつくる</div>
+      <div class="why-desc">映像の完成度より「成果が出るか」を優先。採用・営業・ブランディングなど、目的に応じた戦略から提案します。</div>
+      <div class="why-vs">
+        <div class="why-vs-item"><span class="why-vs-arrow">×</span><span class="why-vs-bad">「きれいな動画」を納品して終わり</span></div>
+        <div class="why-vs-item"><span class="why-vs-arrow">◎</span><span class="why-vs-good">目的から逆算した映像企画を提案</span></div>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">02</div>
+      <div class="why-title">飲食・中小企業の現場を知っている</div>
+      <div class="why-desc">自社でも飲食店を経営。現場の課題・採用の難しさ・SNS活用のリアルを知った上で制作します。</div>
+      <div class="why-vs">
+        <div class="why-vs-item"><span class="why-vs-arrow">×</span><span class="why-vs-bad">大手代理店の画一的なプランニング</span></div>
+        <div class="why-vs-item"><span class="why-vs-arrow">◎</span><span class="why-vs-good">経営者目線で本質的な課題を解決</span></div>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">03</div>
+      <div class="why-title">小回りが利く関西密着の体制</div>
+      <div class="why-desc">代表が直接対応するコンパクトなチームだからこそ、スピーディーな意思決定と柔軟な対応が可能です。</div>
+      <div class="why-vs">
+        <div class="why-vs-item"><span class="why-vs-arrow">×</span><span class="why-vs-bad">大手制作会社の縦割り・長いリードタイム</span></div>
+        <div class="why-vs-item"><span class="why-vs-arrow">◎</span><span class="why-vs-good">代表直対応・最短1週間で撮影可能</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULATOR -->
+<section class="sim-section" id="simulator">
+  <div class="sim-inner">
+    <div class="eyebrow">Price Simulator</div>
+    <h2 class="sec-h">料金シミュレーター</h2>
+    <p style="font-size:13px;color:var(--text2);line-height:1.9;margin-bottom:16px;">選択肢を選ぶだけで概算がわかります。</p>
+    <div class="disclaimer-top">
+      <strong>ご注意</strong>
+      こちらはあくまでも概算です。実際の金額は無料ヒアリングの中でご要望・撮影内容・納期などを詳しくお伺いした上でご提案します。表示価格より前後する場合がありますのでご了承ください。
+    </div>
+
+    <div class="step" id="s1">
+      <div class="step-label">Step 01</div>
+      <div class="step-q">どんな映像を作りたいですか？</div>
+      <div class="opts">
+        <button class="opt" onclick="pick(1,300000,'採用動画',false,this)">採用動画</button>
+        <button class="opt" onclick="pick(1,500000,'企業VP・会社紹介',false,this)">企業VP・会社紹介</button>
+        <button class="opt" onclick="pick(1,100000,'SNS・YouTube動画',false,this)">SNS・YouTube動画</button>
+        <button class="opt" onclick="pick(1,800000,'CM・広告映像',false,this)">CM・広告映像</button>
+      </div>
+    </div>
+
+    <div class="step locked" id="s2">
+      <div class="step-label">Step 02</div>
+      <div class="step-q">動画の長さはどのくらいですか？</div>
+      <div class="opts">
+        <button class="opt" onclick="pick(2,1.0,'〜30秒',false,this)">〜30秒</button>
+        <button class="opt" onclick="pick(2,1.2,'1〜3分',false,this)">1〜3分</button>
+        <button class="opt" onclick="pick(2,1.5,'3〜5分',false,this)">3〜5分</button>
+        <button class="opt" onclick="pick(2,2.0,'5分以上',false,this)">5分以上</button>
+      </div>
+    </div>
+
+    <div class="step locked" id="s3">
+      <div class="step-label">Step 03</div>
+      <div class="step-q">ナレーション・テロップはどうしますか？</div>
+      <div class="opts">
+        <button class="opt" onclick="pick(3,0,'BGMのみ',false,this)">BGMのみ</button>
+        <button class="opt" onclick="pick(3,30000,'テロップあり',false,this)">テロップあり</button>
+        <button class="opt" onclick="pick(3,50000,'ナレーションあり',false,this)">ナレーションあり</button>
+        <button class="opt" onclick="pick(3,80000,'両方あり',false,this)">両方あり</button>
+        <button class="opt consult" onclick="pick(3,0,'相談して決めたい',true,this)">相談して決めたい</button>
+      </div>
+    </div>
+
+    <div class="step locked" id="s4">
+      <div class="step-label">Step 04</div>
+      <div class="step-q">撮影場所・規模はどのくらいですか？</div>
+      <div class="opts">
+        <button class="opt" onclick="pick(4,0,'1箇所・半日',false,this)">1箇所・半日</button>
+        <button class="opt" onclick="pick(4,50000,'1〜2箇所・1日',false,this)">1〜2箇所・1日</button>
+        <button class="opt" onclick="pick(4,120000,'複数箇所・2日以上',false,this)">複数箇所・2日以上</button>
+        <button class="opt consult" onclick="pick(4,0,'相談して決めたい',true,this)">相談して決めたい</button>
+      </div>
+    </div>
+
+    <div class="result-box" id="result">
+      <div class="res-label">概算お見積り</div>
+      <div class="res-price" id="res-price"></div>
+      <div class="res-note" id="res-note"></div>
+      <div class="breakdown" id="breakdown"></div>
+      <div class="disclaimer-bottom">
+        ※ こちらはあくまでも概算です。無料ヒアリングの中でご要望・撮影内容・納期・出演者の有無などを詳しくお伺いした上で正式なお見積りをご提案します。表示価格より前後する場合がありますのでご了承ください。
+      </div>
+      <div class="cta-sim">
+        <button class="cta-sim-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">この内容で正式見積りを依頼する →</button>
+        <div class="cta-sim-note">無料・返信24時間以内</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section class="voices-section" id="voices">
+  <div class="eyebrow">Client Voices</div>
+  <h2 class="sec-h">お客様の声</h2>
+  <div class="voices-grid">
+    <div class="voice-card">
+      <div class="voice-quote">"</div>
+      <div class="voice-company">A社 / 製造業・大阪</div>
+      <div class="voice-type">採用動画</div>
+      <div class="voice-text">採用動画を制作してから応募数が約2倍になりました。求職者から「動画を見て雰囲気が伝わった」という声が増え、入社後のミスマッチも大幅に減っています。</div>
+      <div class="voice-divider"></div>
+      <div class="voice-info">代表取締役 / 従業員数50名</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-quote">"</div>
+      <div class="voice-company">B社 / ITスタートアップ・京都</div>
+      <div class="voice-type">企業VP</div>
+      <div class="voice-text">投資家へのプレゼンに映像を組み込んだところ、会社の世界観が一気に伝わるようになりました。ピッチの場での差別化に大きく貢献しています。</div>
+      <div class="voice-divider"></div>
+      <div class="voice-info">CEO / スタートアップ</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-quote">"</div>
+      <div class="voice-company">C社 / 飲食・兵庫</div>
+      <div class="voice-type">SNS動画</div>
+      <div class="voice-text">SNS用の動画を毎月制作してもらっています。Instagramのフォロワーが3ヶ月で1,000人増え、動画経由での来店も確実に増えました。</div>
+      <div class="voice-divider"></div>
+      <div class="voice-info">マーケティング担当 / 従業員数20名</div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow-section" id="flow">
+  <div class="eyebrow">How We Work</div>
+  <h2 class="sec-h">制作の流れ</h2>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-num">01</div>
+      <div><div class="flow-title">無料ヒアリング</div><div class="flow-desc">目的・ターゲット・ご予算をオンラインまたは訪問でお伺いします。アイデアの段階でもOK。</div></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">02</div>
+      <div><div class="flow-title">企画・提案</div><div class="flow-desc">コンセプト・絵コンテ・スケジュール・お見積りをご提案。ご納得いただいてから進めます。</div></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">03</div>
+      <div><div class="flow-title">撮影</div><div class="flow-desc">関西全域・全国対応。機材・クルー一式でお伺いします。最短1週間で撮影可能。</div></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">04</div>
+      <div><div class="flow-title">編集・仕上げ</div><div class="flow-desc">編集・カラーグレーディング・BGM選定まで一貫対応。修正は2回まで無料。</div></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">05</div>
+      <div><div class="flow-title">納品・活用サポート</div><div class="flow-desc">各種フォーマットで納品。SNS運用・YouTube投稿のサポートも対応可能です。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <div class="contact-big"><div>まず、</div><div class="oline">話そう。</div></div>
+      <p class="contact-lead">アイデアの段階でも大丈夫です。<br>予算・納期・内容、なんでもご相談ください。<br>24時間以内にご返信します。</p>
+      <div class="contact-meta">
+        <div><div class="contact-meta-label">Base</div><div class="contact-meta-val">関西（大阪・兵庫・京都）拠点</div></div>
+        <div><div class="contact-meta-label">Response</div><div class="contact-meta-val">24時間以内に返信</div></div>
+        <div><div class="contact-meta-label">Company</div><div class="contact-meta-val">株式会社 Next Vision</div></div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <input class="cf-input" type="text" placeholder="会社名 / お名前 *">
+      <input class="cf-input" type="email" placeholder="メールアドレス *">
+      <input class="cf-input" type="tel" placeholder="電話番号">
+      <select class="cf-select"><option value="" disabled selected>ご相談内容を選択してください</option><option>採用動画</option><option>企業VP・会社紹介</option><option>SNS・YouTube動画</option><option>CM・広告映像</option><option>その他</option></select>
+      <textarea class="cf-textarea" placeholder="ご相談内容・ご要望など（予算・納期など）"></textarea>
+      <button class="cf-btn">無料相談を申し込む →</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">NEXT<span>.</span>VISION</div>
+  <div class="f-copy">© 2025 株式会社Next Vision. All Rights Reserved.</div>
+  <div class="f-links"><a href="#">Privacy Policy</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
+</footer>
+
+<script>
+var v={base:0,baseL:'',mult:1,multL:'',add1:0,add1L:'',add1C:false,add2:0,add2L:'',add2C:false};
+function fmt(n){return '¥'+n.toLocaleString('ja-JP');}
+function pick(step,val,label,isConsult,btn){
+  document.getElementById('s'+step).querySelectorAll('.opt').forEach(function(b){b.classList.remove('on');});
+  btn.classList.add('on');
+  if(step===1){v.base=val;v.baseL=label;unlock(2);resetFrom(2);}
+  else if(step===2){v.mult=val;v.multL=label;unlock(3);resetFrom(3);}
+  else if(step===3){v.add1=val;v.add1L=label;v.add1C=isConsult;unlock(4);resetFrom(4);}
+  else if(step===4){v.add2=val;v.add2L=label;v.add2C=isConsult;showResult();}
+}
+function unlock(step){document.getElementById('s'+step).classList.remove('locked');}
+function resetFrom(step){
+  for(var i=step+1;i<=4;i++){
+    document.getElementById('s'+i).classList.add('locked');
+    document.getElementById('s'+i).querySelectorAll('.opt').forEach(function(b){b.classList.remove('on');});
+  }
+  document.getElementById('result').classList.remove('show');
+  if(step<=3){v.add1=0;v.add1L='';v.add1C=false;}
+  if(step<=4){v.add2=0;v.add2L='';v.add2C=false;}
+}
+function showResult(){
+  var hasConsult=v.add1C||v.add2C;
+  var base=Math.round(v.base*v.mult);
+  var total=base+v.add1+v.add2;
+  var lo=Math.round(total*0.9/10000)*10000;
+  var hi=Math.round(total*1.3/10000)*10000;
+  document.getElementById('res-price').textContent=hasConsult?fmt(lo)+' 〜':fmt(lo)+' 〜 '+fmt(hi);
+  document.getElementById('res-note').textContent=hasConsult?'「相談して決めたい」項目があるため下限のみの表示です。':'税別・参考価格';
+  var bd='';
+  bd+='<div class="brow"><span class="brow-l">映像種別（'+v.baseL+'）</span><span class="brow-r">'+fmt(v.base)+'</span></div>';
+  bd+='<div class="brow"><span class="brow-l">尺・規模（'+v.multL+'）</span><span class="brow-r">× '+v.mult.toFixed(1)+'</span></div>';
+  bd+='<div class="brow"><span class="brow-l">音声・テロップ（'+v.add1L+'）</span><span class="brow-r">'+(v.add1C?'要相談':'+ '+fmt(v.add1))+'</span></div>';
+  bd+='<div class="brow"><span class="brow-l">撮影規模（'+v.add2L+'）</span><span class="brow-r">'+(v.add2C?'要相談':'+ '+fmt(v.add2))+'</span></div>';
+  document.getElementById('breakdown').innerHTML=bd;
+  var res=document.getElementById('result');
+  res.classList.add('show');
+  res.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
+</html>
